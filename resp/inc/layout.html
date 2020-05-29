@@ -1,0 +1,27 @@
+{% macro include(fileName) -%}
+	{% include fileName ignore missing -%}
+{% endmacro -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{pageVar.title}}</title>
+	<link rel="stylesheet" href="../css/test.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.16.0/polyfill.js"></script>
+	<script src="../js/combined.min.js"></script>
+</head>
+<body>
+
+	{{ include("inc/header.html") | tabIndent(1) }}
+
+	{% filter tabIndent(1) %}
+
+	{% block content %}{% endblock %}
+	
+	{%- endfilter %}
+
+	{{ include("inc/footer.html") | tabIndent(1) }}
+
+</body>
+</html>
