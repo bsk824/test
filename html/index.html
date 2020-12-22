@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>wizit</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="wrap" >
+		<!-- header -->
+	<header class="header">
+		<div class="top">
+			<h1 class="logo"><a href="#"><img src="../img/img_logo.png" alt="wizit"></a></h1>
+			<p class="name">안산도시개발 공사 열량관측</p>
+		</div>
+		<nav class="gnb">
+			<ul class="list">
+				<li class="active"><a href="#">자동검침</a>
+					<ul class="sub">
+						<li class="active"><a href="#">즉시검침</a></li>
+						<li><a href="#">저장검침</a></li>
+						<li><a href="#">장애검침</a></li>
+					</ul>
+				</li>
+				<li><a href="#">수동검침</a>
+					<ul class="sub">
+						<li><a href="#">즉시검침</a></li>
+						<li><a href="#">저장검침</a></li>
+						<li><a href="#">장애검침</a></li>
+					</ul>
+				</li>
+				<li><a href="#">데이터조회</a>
+					<ul class="sub">
+						<li><a href="#">즉시검침</a></li>
+						<li><a href="#">저장검침</a></li>
+						<li><a href="#">장애검침</a></li>
+					</ul>
+				</li>
+				<li><a href="#">설정 및 등록</a>
+					<ul class="sub">
+						<li><a href="#">즉시검침</a></li>
+						<li><a href="#">저장검침</a></li>
+						<li><a href="#">장애검침</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- //header -->
+
+	<div class="container">
+
+		<!-- snb -->
+		<div class="snb">
+			<h2 class="category">자동검침</h2>
+			<div class="listWrap">
+				<div class="top">
+					<span>사용자선택</span>
+					<button type="button" class="btnSel"><span>선택</span></button>
+				</div>
+				<ul class="list">
+					<li>
+						<label class="inputChk">
+							<input type="checkbox">
+							<span>유선</span>
+						</label>
+						<span class="btn">
+							<button type="button" class="btnPlus"><span>더하기</span></button>
+							<button type="button" class="btnMinus"><span>빼기</span></button>
+						</span>
+						<ul class="sub">
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 1번</span>
+								</label>
+							</li>
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 2번</span>
+								</label>
+							</li>
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 3번</span>
+								</label>
+							</li>
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 4번</span>
+								</label>
+							</li>
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 5번</span>
+								</label>
+							</li>
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 6번</span>
+								</label>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<label class="inputChk">
+							<input type="checkbox">
+							<span>유선</span>
+						</label>
+						<span class="btn">
+							<button type="button" class="btnPlus"><span>더하기</span></button>
+							<button type="button" class="btnMinus"><span>빼기</span></button>
+						</span>
+						<ul class="sub">
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 1번</span>
+								</label>
+							</li>
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 2번</span>
+								</label>
+							</li>
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 3번</span>
+								</label>
+							</li>
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 4번</span>
+								</label>
+							</li>
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 5번</span>
+								</label>
+							</li>
+							<li>
+								<label class="inputChk">
+									<input type="checkbox">
+									<span>열량기 6번</span>
+								</label>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //snb -->
+
+		<!-- contents -->
+		<div class="contents">
+
+			<div class="contentsHead">
+				<div class="timeInfo">
+					<span class="txt">검침시간 : <span>2020-12-01</span> <span>10:00:00</span> </span>
+					<span class="txt">현재시간시간 : <span>2020-12-01</span> <span>10:00:00</span> </span>
+				</div>
+			</div>
+
+			<div class="boardHead">
+
+				<div class="cellLeft boardSearch">
+					<select style="width: 132px;">
+						<option>시간</option>
+					</select>
+					<input type="text" class="inputTxt typeCal" value="2020.01.30" style="width: 182px;">
+					<select style="width: 132px;">
+						<option>시간</option>
+					</select>
+					<input type="text" class="inputTxt" value="1" style="width: 132px;">
+					<button type="button" class="btnType1s"><span>검 색</span></button>
+				</div>
+
+				<div class="cellRight btn">
+					<button type="button" class="iconPrint btnType1" onclick="layer.open('#layerDetail');"><span>프린트</span></button>
+					<button type="button" class="iconDown btnType1" onclick="layer.open('#layerGateRag');"><span>다운로드</span></button>
+				</div>
+
+			</div>
+			
+			<div class="boardList">
+				<table>
+					<caption>검침 기록</caption>
+					<colgroup>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="rowgroup" rowspan="2">검침기간</th>
+							<th scope="colgroup" colspan="5">열량 계(계기)</th>
+							<th scope="colgroup" colspan="2">열량 계(MWh)</th>
+							<th scope="colgroup" colspan="2">유량(m2)</th>
+							<th scope="colgroup" colspan="3">온도</th>
+							<th scope="rowgroup" rowspan="2">압력(bar)</th>
+							<th scope="rowgroup" rowspan="2">계기상태</th>
+							<th scope="rowgroup" colspan="2">통신상태</th>
+							<th scope="rowgroup" rowspan="2">장애코드</th>
+						</tr>
+						<tr>
+							<th scope="col" class="type2">구분</th>
+							<th scope="col" class="type2">사용자계정</th>
+							<th scope="col" class="type2">기계실번호</th>
+							<th scope="col" class="type2">기계실번호</th>
+							<th scope="col" class="type2">종류</th>
+							<th scope="col" class="type2">누적열량</th>
+							<th scope="col" class="type2">순시열량</th>
+							<th scope="col" class="type2">누적열량</th>
+							<th scope="col" class="type2">순시열량</th>
+							<th scope="col" class="type2">공급온도</th>
+							<th scope="col" class="type2">회수온도</th>
+							<th scope="col" class="type2">온도차</th>
+							<th scope="col" class="type2">통신부</th>
+							<th scope="col" class="type2">열량계</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="err">에러 (보기)</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="err">에러</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="err">에러 (보기)</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="err">에러</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="err">에러 (보기)</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="err">에러</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="err">에러 (보기)</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="err">에러</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="err">에러 (보기)</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="err">에러</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="err">에러 (보기)</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="err">에러</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="err">에러 (보기)</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="err">에러</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+						<tr>
+							<td>
+								<span>2020-11-17</span>
+								<span>10:00</span>
+							</td>
+							<td>무선</td>
+							<td>열량계1</td>
+							<td>GW20001</td>
+							<td>113344</td>
+							<td>난방</td>
+							<td>430.992</td>
+							<td>430.992</td>
+							<td>15475.200</td>
+							<td>6492.00</td>
+							<td>55.780</td>
+							<td>33.200</td>
+							<td>22.580</td>
+							<td>16.000</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>성공</td>
+							<td><span class="stateDp" data-state="suc">정상</span></td>
+							<td>2,3 보기</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- //contents -->
+
+	</div>
+
+	<!-- layer -->
+	<div class="layerPopup" id="layerDetail">
+		<section class="popupWrap" style="width: 1120px;">
+			<div class="popupHeader">
+				<h3 class="title">열량계 (기기) 상세정보</h3>
+			</div>
+			<div class="popupContents">
+
+				<div class="table">
+					<table>
+						<caption>상세정보</caption>
+						<colgroup>
+							<col style="width:240px;">
+							<col style="width:280px;">
+							<col style="width:240px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">사용자 계정</th>
+								<td>테스트기기01</td>
+								<th scope="row">기계실번호</th>
+								<td>1</td>
+							</tr>
+							<tr>
+								<th scope="row">구분</th>
+								<td>유선 / 무선</td>
+								<th scope="row">GATE ID</th>
+								<td>01710002</td>
+							</tr>
+							<tr>
+								<th scope="row">GATE 이름</th>
+								<td>1번게이트</td>
+								<th scope="row">GATE 전화번호</th>
+								<td>021541111</td>
+							</tr>
+							<tr>
+								<th scope="row">열량계 번호</th>
+								<td>11</td>
+								<th scope="row">열량계 제조번호</th>
+								<td>01710002</td>
+							</tr>
+							<tr>
+								<th scope="row">열량계 종류</th>
+								<td>WIZIT</td>
+								<th scope="row">지역번호</th>
+								<td>031</td>
+							</tr>
+							<tr>
+								<th scope="row">제조번호</th>
+								<td>000000</td>
+								<th scope="row">전화번호</th>
+								<td>021541111</td>
+							</tr>
+							<tr>
+								<th scope="row">포트번호</th>
+								<td>9999</td>
+								<th scope="row">검침 PC계정</th>
+								<td>admin</td>
+							</tr>
+							<tr>
+								<th scope="row">용도</th>
+								<td>공급용</td>
+								<th scope="row">열량계 규격(Grpc NET정보)</th>
+								<td>-</td>
+							</tr>
+							<tr>
+								<th scope="row">난방 면적</th>
+								<td>-</td>
+								<th scope="row">세대 수</th>
+								<td>10</td>
+							</tr>
+							<tr>
+								<th scope="row">연결열 부하</th>
+								<td>-</td>
+								<th scope="row">수요 관라형</th>
+								<td>일반형</td>
+							</tr>
+							<tr>
+								<th scope="row">마스터장비 규격</th>
+								<td>-</td>
+								<th scope="row">마스터장비 구분</th>
+								<td>S</td>
+							</tr>
+							<tr>
+								<th scope="row">마스터장비 제조번호</th>
+								<td></td>
+								<th scope="row">마스터장비 설치일자</th>
+								<td>20201201</td>
+							</tr>
+							<tr>
+								<th scope="row">초기화 여부</th>
+								<td>초기화 완료</td>
+								<th scope="row">삭제여부</th>
+								<td>사용</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+			<button type="button" class="btnClose" onclick="layer.close();"><span>닫기</span></button>
+		</section>
+		<div class="bg"></div>
+	</div>
+
+	<div class="layerPopup" id="layerGateRag">
+		<section class="popupWrap" style="width: 1120px;">
+			<div class="popupHeader">
+				<h3 class="title">GATE 등록</h3>
+			</div>
+			<div class="popupContents">
+
+				<div class="table">
+					<table>
+						<caption>상세정보</caption>
+						<colgroup>
+							<col style="width:240px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">구분</th>
+								<td>
+									<select style="width:132px;">
+										<option value="">1</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">GATE ID</th>
+								<td>
+									<input type="text" class="inputTxt" style="width: 100%;">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">GATE 이름(명칭)</th>
+								<td>
+									<input type="text" class="inputTxt" style="width: 100%;">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">GATE 전화번호</th>
+								<td>
+									<input type="text" class="inputTxt" style="width: 100%;">
+									<p class="etc">* 수정 시 이력이 저장됩니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">비고</th>
+								<td>
+									<textarea cols="30" rows="4" style="width: 100%;"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btnWrap boardFooter">
+					<span class="btnRight">
+						<button type="button" class="btnType2sizeL">목록으로</button>
+						<button type="button" class="btnType1sizeL">저 장</button>
+					</span>
+				</div>
+
+			</div>
+			<button type="button" class="btnClose" onclick="layer.close();"><span>닫기</span></button>
+		</section>
+		<div class="bg"></div>
+	</div>
+	<!-- //layer -->
+
+	<script>
+	var gnb = function() {
+		var gnbWrap = document.querySelector('.gnb');
+		var list = gnbWrap.querySelector('.list');
+		var child = list.childNodes;
+		var dep1 = [];
+		var dep1Func = function(obj){
+			obj.addEventListener('mouseenter', function(){
+				dep1.forEach(function(obj){
+					if(obj.classList.contains('active')) obj.classList.remove('active');
+				});
+				this.classList.add('active');
+			});
+			dep1.push(obj);
+		};
+		[].forEach.call(child, function(_this){
+			if(_this.tagName === 'LI') {
+				dep1Func(_this);
+			}
+		});
+	}
+	window.addEventListener('DOMContentLoaded', function(){
+		gnb();
+	})
+	var layer = {
+		open : function(id){
+			var target = document.querySelector(id);
+			target.classList.add('show');
+		},
+		close : function(id){
+			var target;
+			var obj;
+			var find = function(el, str){
+				var tag = el.parentNode.tagName.toLowerCase();
+				var cls = el.parentNode.classList;
+				obj = el.parentNode;
+				if (str !== tag && !cls.contains(str)) {
+					if (tag != 'body') {
+						find(obj, str);
+					} else {
+						obj = null;
+					}
+				}
+				return obj;
+			}
+			if(id) {
+				target = document.querySelector(id);
+			} else {
+				var $this = event.currentTarget;
+				target = find($this, 'layerPopup');
+			}
+			target.classList.remove('show');
+		}
+	}
+	</script>
+	</div>
+</body>
+
+</html>
